@@ -75,7 +75,7 @@ const RegisterScreen = (props) => {
     }
     formBody = formBody.join('&');
 
-    fetch('http://192.168.1.31:3000/api/user/register', {
+    fetch('http://10.0.2.2:3000/api/user/register', {
       method: 'POST',
       body: formBody,
       headers: {
