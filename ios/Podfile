@@ -16,6 +16,8 @@ target 'ProjectName' do
 
   pod 'ReactNativeCameraKit', :path => '../node_modules/react-native-camera-kit'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'ProjectNameTests' do
     inherit! :complete
     # Pods for testing

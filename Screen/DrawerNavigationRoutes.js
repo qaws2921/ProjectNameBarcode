@@ -11,6 +11,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 // Import Screens
 import HomeScreen from './DrawerScreens/HomeScreen';
 import SettingsScreen from './DrawerScreens/SettingsScreen';
+import TpmMc from './DrawerScreens/TpmMc';
 import CameraScreen from './DrawerScreens/CameraScreen';
 import CustomSidebarMenu from './Components/CustomSidebarMenu';
 import NavigationDrawerHeader from './Components/NavigationDrawerHeader';
@@ -69,6 +70,35 @@ const settingScreenStack = ({navigation}) => {
   );
 };
 
+
+const TpmMcStack = ({navigation}) => {
+  return (
+    <Stack.Navigator
+      initialRouteName="TpmMc"
+      screenOptions={{
+        headerLeft: () => (
+          <NavigationDrawerHeader navigationProps={navigation} />
+        ),
+        headerStyle: {
+          backgroundColor: '#1453a1', //Set Header color
+        },
+        headerTintColor: '#fff', //Set Header text color
+        headerTitleStyle: {
+          fontWeight: 'bold', //Set Header text style
+        },
+      }}>
+      <Stack.Screen
+        name="TpmMc"
+        component={TpmMc}
+        options={{
+          title: '설비관리', //Set Header Title
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+
 const cameraScreenStack = ({navigation}) => {
   return (
     <Stack.Navigator
@@ -119,6 +149,11 @@ const DrawerNavigatorRoutes = (props) => {
         name="settingScreenStack"
         options={{drawerLabel: '세팅'}}
         component={settingScreenStack}
+      />
+      <Drawer.Screen
+        name="TpmMcStack"
+        options={{drawerLabel: '설비관리'}}
+        component={TpmMcStack}
       />
       <Drawer.Screen
         name="cameraScreenStack"
