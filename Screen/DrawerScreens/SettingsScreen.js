@@ -267,9 +267,7 @@ class SettingsScreen extends Component {
       <TouchableOpacity style={styles.button2} onPress={this.onPressFunction.bind(this)}>
         <Text style={styles.arrow}>^</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button3} onPress={() =>this.displayModal(true)}>
-        <Text style={styles.arrow}>+</Text>
-      </TouchableOpacity>
+ 
       <RNPickerSelect
           
               onValueChange={(value) => { this.setState({value:value})}}
